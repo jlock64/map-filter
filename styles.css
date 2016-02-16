@@ -1,0 +1,7 @@
+pre {
+  background-color: blue;
+  display: inline-block;
+  color: #fff;
+  padding: 5px;
+  box-shadow: 1px 1px 10px black;
+}
