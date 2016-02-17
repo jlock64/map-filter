@@ -5,20 +5,12 @@ items.forEach(function(el) {
   total += el.price;
 })
 var avg = total / items.length;
-document.getElementById('answer1').innerHTML = avg;
+document.getElementById('answer1').innerHTML = avg.toFixed(2);
 
 // 2)
 
-
-// function costSpecific(el) {
-//   return el.price >= 14 && el.price <= 18;
-// }
-//
-// items.filter(costSpecific);
-
 var costFilterArr = items.filter(function(el) {
   return el.price >= 14 && el.price <= 18;
-  console.log(el.price >= 14 && el.price <= 18);
 })
 
 var costArray = [];
@@ -51,7 +43,7 @@ var woodFilter = items.filter(function(el) {
 })
 
 var woodMap = woodFilter.map(function(el) {
-  return "</br>" + el.title;
+  return "<p>" + el.title;
 })
 
 
@@ -73,7 +65,7 @@ var mappedLongItemArr = longItemArr.map(function(el) {
 
 var newStr = "";
 mappedLongItemArr.forEach(function(el) {
-  newStr += "</br>" + "Title: " + el.name + " Num of Items:" + el.numItems + " Made of " + el.madeOf;
+  newStr += "<p>" + "Title: " + el.name + " Num of Items:" + el.numItems + " Made of " + el.madeOf;
 })
 document.getElementById('answer5').innerHTML = newStr;
 
@@ -84,7 +76,7 @@ var makerArray = items.filter(function(el) {
 })
 
 var mappedMakerArray = makerArray.map(function(el) {
-  return "</br>" + el.title;
+  return "<p>" + el.title;
 })
 
-document.getElementById('answer6').innerHTML = makerArray.length + " items total." + "</br>" + mappedMakerArray;
+document.getElementById('answer6').innerHTML = "<h1>" + makerArray.length + " items total." + "</h1>"+ "<p>" + mappedMakerArray;
